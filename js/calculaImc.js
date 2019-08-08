@@ -20,13 +20,11 @@ for (var i = 0; i < pacientes.length; i++) {
     if (peso < 0 || peso > 1000) {
         validaPeso = false;
         tdImc.textContent = "Peso inválido";
-        console.log("Peso inválido");
         paciente.classList.add("paciente-invalido");
     }
 
     if (altura < 0 || altura > 3.00) {
         validaAltura = false;
-        console.log("Altura inválida");
         tdImc.textContent = "Altura inválida";
         paciente.classList.add("paciente-invalido");
     }
@@ -38,9 +36,3 @@ for (var i = 0; i < pacientes.length; i++) {
     }
 
 }
-
-var botaoAdicionar = document.querySelector('#adicionar-paciente');
-botaoAdicionar.addEventListener("click", function(event){
-    event.preventDefault();
-    console.log("Fui clicado");
-});
